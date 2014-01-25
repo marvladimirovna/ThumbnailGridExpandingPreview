@@ -1,6 +1,6 @@
 .og-grid {
 	list-style: none;
-	padding: 20px 0;
+	padding: 65px 0;
 	margin: 0 auto;
 	text-align: center;
 	width: 100%;
@@ -37,7 +37,7 @@
 
 .og-expander {
 	position: absolute;
-	background: #ddd;
+	background:#f7f6f5;
 	top: auto;
 	left: 0;
 	width: 100%;
@@ -65,7 +65,7 @@
 .og-close::after {
 	content: '';
 	position: absolute;
-	width: 100%;
+	width: 50%;
 	top: 50%;
 	height: 1px;
 	background: #888;
@@ -109,27 +109,29 @@
 }
 
 .og-details h3 {
+	color:#888;
+	font-variant:small-caps;
 	font-weight: 300;
-	font-size: 52px;
+	font-size: 30px;
 	padding: 40px 0 10px;
 	margin-bottom: 10px;
 }
 
 .og-details p {
-	font-weight: 400;
+	font-weight: 300;
 	font-size: 16px;
 	line-height: 22px;
 	color: #999;
 }
 
 .og-details a {
-	font-weight: 700;
+	font-weight: 300;
 	font-size: 16px;
-	color: #333;
-	text-transform: uppercase;
+	color: #cccccc;
+	text-variant: small-caps;
 	letter-spacing: 2px;
 	padding: 10px 20px;
-	border: 3px solid #333;
+	border: 2px solid #cccccc;
 	display: inline-block;
 	margin: 30px 0 0;
 	outline: none;
@@ -142,8 +144,8 @@
 }
 
 .og-details a:hover {
-	border-color: #999;
-	color: #999;
+	background-color: #cccccc;
+	color: white;
 }
 
 .og-loading {
