@@ -383,13 +383,15 @@ var Grid = (function() {
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
 					description : $itemEl.data( 'description' ),
-					viewLabel : $itemEl.data( 'viewlabel' ) || "visit website"
+					viewLabel : $itemEl.data( 'viewlabel' ) || "visit website",
+					customElement : $itemEl.data( 'customElement' )
 				};
 
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
 			this.$href.attr( 'href', eldata.href );
 			this.$href.text( eldata.viewLabel );
+			this.$customElement = eldata.customElement ? $(eldata.customElement) : null;
 
 			var self = this;
 			
@@ -401,16 +403,21 @@ var Grid = (function() {
 			// preload large image and add it to the preview
 			// for smaller screens we don´t display the large image (the media query will hide the fullimage wrapper)
 			if( self.$fullimage.is( ':visible' ) ) {
-				this.$loading.show();
-				$( '<img/>' ).load( function() {
-					var $img = $( this );
-					if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
-						self.$loading.hide();
-						self.$fullimage.find( 'img' ).remove();
-						self.$largeImg = $img.fadeIn( 350 );
-						self.$fullimage.append( self.$largeImg );
-					}
-				} ).attr( 'src', eldata.largesrc );	
+				if (self.$customElement) {
+					self.$loading.hide();
+					self.$customElement.clone().appendTo(self.$fullimage);
+				} else {
+					this.$loading.show();
+					$( '<img/>' ).load( function() {
+						var $img = $( this );
+						if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
+							self.$loading.hide();
+							self.$fullimage.find( 'img' ).remove();
+							self.$largeImg = $img.fadeIn( 350 );
+							self.$fullimage.append( self.$largeImg );
+						}
+					} ).attr( 'src', eldata.largesrc );	
+				}
 			}
 
 		},

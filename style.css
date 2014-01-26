@@ -136,4 +136,14 @@ font-size:1.2em;
 	
 .blur:hover + .name2 {
 	visibility:visible;
-	}			
+	}	
+
+.custom-element {
+	display: none;
+}
+
+.og-fullimg .custom-element {
+	display: block;
+}
+
+.		
