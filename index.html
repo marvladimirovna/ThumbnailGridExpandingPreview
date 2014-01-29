@@ -15,7 +15,8 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="animate.css">
        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-		<script src="js/modernizr.custom.js"></script>
+        <!-- bxSlider CSS file -->
+        <link href="css/jquery.bxslider.css" rel="stylesheet" />
 	</head>
 	<body>
 
@@ -97,7 +98,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="images/12.jpg" data-title="origami illustration" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="images/12.jpg" data-title="origami illustration" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." data-custom-element="#origami-gallery" data-func="initBxslider">
 							<img  class="blur" src="images/thumbs/12.jpg" alt="img12"/>
                             <span class="name2">illustration</span>
 						</a>
@@ -130,6 +131,12 @@
      <div id="fireman-video" class="custom-element">
 		<iframe src="http://player.vimeo.com/video/67361831" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/67361831">fireman</a> from <a href="http://vimeo.com/user16811388">Masha Yukhimenko</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
      </div>
+        <ul class="bxslider custom-element" id="origami-gallery">
+          <li><img src="images/1.jpg" /></li>
+          <li><img src="images/2.jpg" /></li>
+          <li><img src="images/3.jpg" /></li>
+          <li><img src="images/4.jpg" /></li>
+        </ul>
      <div class="social">
      
 		<a href="https://plus.google.com/u/0/104361211307866265986"><img src="social2.png" alt="Follow on Google+"/></a>
@@ -142,11 +149,20 @@
             
 		</div><!-- /container -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="js/grid.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+        <script src="js/grid.js"></script>
 		<script>
 			$(function() {
 				Grid.init();
 			});
+            // $(document).ready(function(){
+            //   $('.bxslider').bxSlider();
+            // });
+            function initBxslider($elem) {
+                $elem.bxSlider();  
+            }
 		</script>
+        <!-- bxSlider Javascript file -->
+        <script src="js/jquery.bxslider.min.js"></script>
 	</body>
 </html>

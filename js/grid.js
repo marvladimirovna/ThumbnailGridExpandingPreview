@@ -384,7 +384,8 @@ var Grid = (function() {
 					title : $itemEl.data( 'title' ),
 					description : $itemEl.data( 'description' ),
 					viewLabel : $itemEl.data( 'viewlabel' ) || "visit website",
-					customElement : $itemEl.data( 'customElement' )
+					customElement : $itemEl.data( 'customElement' ),
+					func : $itemEl.data( 'func' )
 				};
 
 			this.$title.html( eldata.title );
@@ -392,6 +393,7 @@ var Grid = (function() {
 			this.$href.attr( 'href', eldata.href );
 			this.$href.text( eldata.viewLabel );
 			this.$customElement = eldata.customElement ? $(eldata.customElement) : null;
+			this.$func = eldata.func;
 
 			var self = this;
 			
@@ -403,9 +405,14 @@ var Grid = (function() {
 			// preload large image and add it to the preview
 			// for smaller screens we don´t display the large image (the media query will hide the fullimage wrapper)
 			if( self.$fullimage.is( ':visible' ) ) {
+				self.$fullimage.empty();
 				if (self.$customElement) {
 					self.$loading.hide();
-					self.$customElement.clone().appendTo(self.$fullimage);
+					var $elementCopy = self.$customElement.clone();
+					$elementCopy.appendTo(self.$fullimage);
+					if (this.$func) {
+						window[this.$func]($elementCopy);
+					}
 				} else {
 					this.$loading.show();
 					$( '<img/>' ).load( function() {
