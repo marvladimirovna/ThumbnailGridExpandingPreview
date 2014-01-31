@@ -300,18 +300,18 @@ var Grid = (function() {
 		if( typeof preview != 'undefined' ) {
 
 			// not in the same row
-			if( previewPos !== position ) {
+			//if( previewPos !== position ) {
 				// if position > previewPos then we need to take te current preview´s height in consideration when scrolling the window
 				if( position > previewPos ) {
 					scrollExtra = preview.height;
 				}
 				hidePreview();
-			}
+			//}
 			// same row
-			else {
-				preview.update( $item );
-				return false;
-			}
+			//else {
+			//	preview.update( $item );
+			//	return false;
+			//}
 			
 		}
 

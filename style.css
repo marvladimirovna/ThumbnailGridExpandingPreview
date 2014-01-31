@@ -97,6 +97,7 @@ height:auto;
   margin: 0 auto;
   text-align: center;
   width: 100%;
+  padding-bottom:4%;
 	
 	}	
 /*.copyright{
@@ -146,4 +147,17 @@ font-size:1.2em;
 	display: block;
 }
 
-.		
+
+.no-button .og-expander a {
+	display: none;
+}
+
+@media screen and (max-width: 650px) {
+
+	.name1 { width:20%;
+	height:auto; }
+	.redguy {width:12%;
+	height:auto; }
+	
+
+}		
