@@ -38,9 +38,29 @@ font-weight:bold;
 text-align:left;
 width:11%;
 height:auto;
+display:inline;
 
 	}	
-
+	
+	
+	
+/*.ship1{
+float:left;
+margin: -9px 5px 0 5px;
+color:#c45b2b;
+font-size:1.2em;
+font-variant:small-caps;
+font-weight:bold;
+text-align:left;
+width:11%;
+height:auto;
+display:none;	
+	}
+	
+.ship1:hover{
+display:inline;	
+	}*/
+		
 .touch{
 font-weight:bold;
 font-variant:small-caps;
