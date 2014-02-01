@@ -300,18 +300,18 @@ var Grid = (function() {
 		if( typeof preview != 'undefined' ) {
 
 			// not in the same row
-			//if( previewPos !== position ) {
+			if( previewPos !== position ) {
 				// if position > previewPos then we need to take te current preview´s height in consideration when scrolling the window
 				if( position > previewPos ) {
 					scrollExtra = preview.height;
 				}
 				hidePreview();
-			//}
+			}
 			// same row
-			//else {
-			//	preview.update( $item );
-			//	return false;
-			//}
+			else {
+				preview.update( $item );
+				return false;
+			}
 			
 		}
 
@@ -390,8 +390,14 @@ var Grid = (function() {
 
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
-			this.$href.attr( 'href', eldata.href );
-			this.$href.text( eldata.viewLabel );
+			if (!eldata.href || eldata.href === "#") {
+				this.$href.hide();
+			} else {
+				this.$href.show();
+				this.$href.attr( 'href', eldata.href );
+				this.$href.text( eldata.viewLabel );
+			}
+			
 			this.$customElement = eldata.customElement ? $(eldata.customElement) : null;
 			this.$func = eldata.func;
 

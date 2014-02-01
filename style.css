@@ -127,7 +127,7 @@ height:auto;
 	}*/
 	
 	
-	.blur {
+.og-grid > li> a > .blur {
   -webkit-transition: all 1s ease;
      -moz-transition: all 1s ease;
        -o-transition: all 1s ease;
@@ -135,9 +135,10 @@ height:auto;
           transition: all 1s ease;
 }
  
-.blur:hover {
+.og-grid > li> a:hover >.blur {
   -webkit-filter: blur(5px);
 }
+
 .name2{
 display:block;
 visibility:hidden;
@@ -155,9 +156,9 @@ font-variant:small-caps;
 font-size:1.2em;
 	}
 	
-.blur:hover + .name2 {
-	visibility:visible;
-	}	
+.og-grid > li> a:hover > .name2 {
+  visibility:visible;
+}	
 
 .custom-element {
 	display: none;
