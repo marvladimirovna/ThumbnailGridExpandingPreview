@@ -185,6 +185,12 @@ $elem.children("img").elevateZoom({
 });
 }  
 
+if (Modernizr.touch){
+   $(".blur").removeClass("blur");
+   $(".name2").remove();
+} else {
+   // bind to normal click, mousemove, etc
+}
 
 </script> 
 
