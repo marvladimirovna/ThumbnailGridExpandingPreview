@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="animate.css">
        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+       
         <!-- bxSlider CSS file -->
        
 	</head>
@@ -32,7 +33,7 @@
      				</div>        
 				<ul id="og-grid" class="og-grid">
  					<li>
-						<a href="#" data-largesrc="images/1.jpg" data-title="proverb poster" data-description="This is a proverb poster for my Advanced Imaging class in Academy of Art University" data-viewlabel="hhaha!!">
+						<a href="#" data-largesrc="images/1.jpg" data-title="proverb poster" data-description="This is a proverb poster for my Advanced Imaging class in Academy of Art University" data-custom-element="#first" data-func="initZoom">
 							<img  class="blur" src="images/thumbs/1.jpg" alt="img01"/>
                             <span class="name2">proverb poster</span>
  						</a>
@@ -140,6 +141,10 @@
         <div id="ben" class="custom-element">
 		<iframe width="500" height="315" src="http://www.youtube.com/embed/yp5jAuY4pZI" frameborder="0" allowfullscreen></iframe>
         </div>
+        
+        <div id="first" class="custom-element">
+		<img id="zoom_07" data-zoom-image="images/1.jpg" src="images/1.jpg" />
+        </div>
         <!--<ul class="bxslider custom-element" id="origami-gallery">
           <li><img src="images/1.jpg" /></li>
           <li><img src="images/2.jpg" /></li>
@@ -161,6 +166,8 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="js/modernizr.custom.js"></script>
         <script src="js/grid.js"></script>
+        <script src="jquery.elevatezoom.js"></script>
+         
 		<script>
 			$(function() {
 				Grid.init();
@@ -175,7 +182,17 @@
 
   ga('create', 'UA-47713003-1', 'marvladimirovna.com');
   ga('send', 'pageview');
+function initZoom($elem) {
+$elem.children("img").elevateZoom({
+  zoomType				: "lens",
+  lensShape : "round",
+  lensSize    : 200
+});
+}  
+
 
 </script> 
+
+
 	</body>
 </html>
