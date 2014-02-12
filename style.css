@@ -20,8 +20,8 @@ margin: 12px 5px 0 5px;
 /*top:-37px;*/
 color:#c45b2b;
 font-size:1.2em;
-font-variant:small-caps;
-font-weight:bold;
+
+
 text-align:left;
 
 height:auto;
@@ -33,16 +33,24 @@ float:left;
 margin: -9px 5px 0 5px;
 color:#c45b2b;
 font-size:1.2em;
-font-variant:small-caps;
+
 font-weight:bold;
 text-align:left;
-width:11%;
+width:30%;
 height:auto;
 display:inline;
 
 	}	
 	
-		
+.firstname{
+	float:left;
+margin: 12px 5px 0 5px;
+	font-weight:bold;
+	text-align:left;
+margin-top:0px;
+height:auto;
+	
+	}	
 .touch{
 font-weight:bold;
 font-variant:small-caps;
@@ -80,19 +88,16 @@ height:auto;
 
 .duty{
 
-	font-size:1.2em;
-	color:#cccccc;
+	font-size:0.9em;
+	margin-top:0px;
 	font-weight:regular;
-	text-align:left;
-	float:left;
-	font-variant:small-caps;
+	/*text-align:left;
+	float:left;*/
+	margin-left:109px;
 }	
 	
 .social{
-  /*left: 50%;
-  margin-top: -3%;
-  margin-left: 45%;
-  margin-bottom:4%;*/
+
   margin: 0 auto;
   text-align: center;
   width: 100%;
@@ -125,7 +130,7 @@ visibility:hidden;
 color:white;
 z-index:10;
 position:absolute;
-top:110px;
+top:90px;
 left:0;
 margin-left:auto;
 margin-right:auto;
@@ -155,10 +160,11 @@ font-size:1.2em;
 
 @media screen and (max-width: 801px) {
 
-	.name1 { width:20%;
+	.name1 { width:30%;
 	height:auto; }
 	.redguy {width:12%;
 	height:auto; }
+	
 	
 	
 	}

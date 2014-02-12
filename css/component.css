@@ -8,9 +8,9 @@
 
 .og-grid li {
 	display: inline-block;
-	margin: 10px 5px 0 5px;
+	margin: 2px -4px 0 3px;
 	vertical-align: top;
-	height: 250px;
+	height: 200px;
 }
 
 .og-grid li > a,
@@ -37,7 +37,9 @@
 
 .og-expander {
 	position: absolute;
-	background:#f7f6f5;
+	background:#f7f6f5 url(pattern.png) repeat
+	;
+	
 	top: auto;
 	left: 0;
 	width: 100%;
