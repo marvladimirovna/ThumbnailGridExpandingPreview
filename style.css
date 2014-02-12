@@ -17,7 +17,7 @@ height:60px;   /* Height of the footer */
 .name{
 float:left;
 margin: 12px 5px 0 5px;
-/*top:-37px;*/
+
 color:#c45b2b;
 font-size:1.2em;
 
@@ -36,7 +36,7 @@ font-size:1.2em;
 
 font-weight:bold;
 text-align:left;
-width:30%;
+width:100px;
 height:auto;
 display:inline;
 
@@ -49,6 +49,8 @@ margin: 12px 5px 0 5px;
 	text-align:left;
 margin-top:0px;
 height:auto;
+margin-left:0px;
+z-index:100;
 	
 	}	
 .touch{
@@ -91,9 +93,11 @@ height:auto;
 	font-size:0.9em;
 	margin-top:0px;
 	font-weight:regular;
+	margin-bottom:0px;
 	/*text-align:left;
 	float:left;*/
-	margin-left:109px;
+	/*margin-left:109px;*/
+	z-index:100;
 }	
 	
 .social{
@@ -104,7 +108,25 @@ height:auto;
   padding-bottom:4%;
 	
 	}	
-
+.copyright{
+	
+font-size:0.7em;
+color:#cccccc;	
+	}	
+	
+.duties{
+width:4%;
+height:auto;
+padding-right:10px;	
+	
+	}
+		
+.nearimage{
+	z-index:100;
+	position:absolute;
+	margin-left:70px;
+	
+	}
 	
 @media screen and (min-width: 660px){	
 
@@ -120,7 +142,7 @@ height:auto;
 .og-grid > li> a:hover >.blur {
   -webkit-filter: blur(5px);
 }
-
+	
 
 }
 
@@ -158,13 +180,26 @@ font-size:1.2em;
 	display: none;
 }
 
-@media screen and (max-width: 801px) {
+@media screen and (max-width: 800px) {
 
-	.name1 { width:30%;
+	.name1 { width:16%;
 	height:auto; }
 	.redguy {width:12%;
 	height:auto; }
 	
+	.nearimage{
+
+margin-left:70px;
+z-index:100;
+	position:absolute;
+
+	
+	}
+	
+.name1{
+width:100px;	
+	
+	}		
 	
 	
 	}
@@ -174,8 +209,5 @@ font-size:1.2em;
 
 }	
 
-.copyright{
 	
-font-size:0.8em;
-color:#cccccc;	
-	}	
+	
