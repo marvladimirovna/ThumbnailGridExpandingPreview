@@ -13,6 +13,31 @@
 	height: 200px;
 }
 
+.og-grid li.two {
+	width: 403px;
+	
+}
+
+.og-grid li.two a{
+background-color:#d57f2b;
+height: 200px;	
+}
+
+.og-grid li.three {
+	width: 606px;
+	
+}
+
+.og-grid li.three a{
+
+	background-color:#cf9d31;
+	height: 200px;
+}
+
+.og-grid li.four {
+	width: 800px;
+}
+
 .og-grid li > a,
 .og-grid li > a img {
 	border: none;
