@@ -1,42 +1,35 @@
 .og-grid {
 	list-style: none;
-	padding:65px 0 15px;
+	padding:79px 0 0px;
 	margin: 0 auto;
 	text-align: center;
 	width: 100%;
+	/*padding-left: 200px;*/
 }
 
 .og-grid li {
 	display: inline-block;
-	margin: 2px -4px 0 3px;
+	margin: 3px -1px 0 0px;
 	vertical-align: top;
-	height: 200px;
 }
 
 .og-grid li.two {
 	width: 403px;
-	
+	margin: 3px -1px 0 0px;
 }
 
 .og-grid li.two a{
-background-color:#d57f2b;
-height: 200px;	
-}
+/*	height: 200px;	*/
 
-.og-grid li.three {
-	width: 606px;
-	
 }
 
 .og-grid li.three a{
 
-	background-color:#cf9d31;
-	height: 200px;
+	/*background-color:#cf9d31;
+	height: 200px;*/
 }
 
-.og-grid li.four {
-	width: 800px;
-}
+
 
 .og-grid li > a,
 .og-grid li > a img {
@@ -44,6 +37,7 @@ height: 200px;
 	outline: none;
 	display: block;
 	position: relative;
+	width: 100%;
 }
 
 .og-grid li.og-expanded > a::after {
@@ -222,7 +216,7 @@ height: 200px;
 	.og-details { float: none; width: 100%; }
 	.og-grid {
 
-	padding:88px 0 15px;
+	padding:0px 0 0px -31px;
 	
 }
 

@@ -28,12 +28,12 @@ html { height: 100%; }
 }
 
 body {
-	
-	/*font-family: 'Lato', sans-serif;*/
+
 	font-family: 'Muli', sans-serif;
     font-size: 15px;
     overflow: scroll;
     overflow-x: hidden;
+	margin:-15px 0px 0px 0px;
 	
 	
 }
